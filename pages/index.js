@@ -1,31 +1,9 @@
 import Head from 'next/head'
 import {motion} from "framer-motion"
-import db from "../lib/clientApp";
-import {useCollection} from "react-firebase-hooks/firestore";
-
+import Heart from "../components/Heart";
 
 export default function Home() {
-    const [heart] = useCollection(
-        db.collection('ucraine'),
-        {}
-    );
 
-    let currentHeartAmount = 0;
-
-    function createHeart() {
-        try {
-            db.collection('ucraine')
-                .doc('IMuEodzo23jgHF3lpxZJ')
-                .update({
-                    heart: currentHeartAmount + 1,
-                })
-                .then(
-                )
-        } catch (error) {
-            console.log(error)
-            alert(error)
-        }
-    }
 
     return (
         <div>
@@ -69,11 +47,12 @@ export default function Home() {
                         Du möchtest die Ukraine und diese Seite untersützen?
                     </h1>
                     <p className={"text-3xl pr-1"}>
-                        Wenn du diese Website unterstützen willst, kannst du sie z.B auf <a
+                        Wenn du diese Website unterstützen willst, kannst du sie z.B. auf <a
                         className={"text-blue-500 hover:text-blue-400 transition cursor-pointer"}
                         rel="noreferrer"
                         target={"_blank"}
-                        href={"http://www.twitter.com/share?url=Schau dir doch mal https://ukraine.live an und untersütze die Ukraine! ❤️&hashtags=Ukraine,Regierung @marvhuelsmann"}>Twitter tweeten</a>, <br/>um an die Ukraine zu spenden, benutze die <a
+                        href={"http://www.twitter.com/share?url=Schau dir doch mal https://ukraine.live an und untersütze die Ukraine! ❤️&hashtags=Ukraine,Regierung @marvhuelsmann"}>Twitter
+                        tweeten</a>, <br/>um an die Ukraine zu spenden, benutze die <a
                         className={"text-blue-500 hover:text-blue-400 transition cursor-pointer"}
                         rel="noreferrer"
                         href={"https://twitter.com/Ukraine/status/1497594592438497282?s=20"}
@@ -85,42 +64,14 @@ export default function Home() {
                 <h1 className={"text-5xl font-bold"}>
                     Schenke der Ukraine
                 </h1>
-                <motion.div
-                    animate={{
-                        scale: 0.9
-                    }}
-                    transition={{
-                        type: "spring",
-                        stiffness: 10,
-                        damping: 20
-                    }}
-                    className={"text-center"}>
-                    {heart && heart.docs.map((doc) => (
-                        <div key={doc.id}>
-                            {(doc.id === 'IMuEodzo23jgHF3lpxZJ' &&
-                                <div className={"xl:pt-0 pt-4"}>
-                                    <h1
-                                        className={"xl:text-8xl md:text-8xl text-5xl transition cursor-pointer font-bold"}>
-                                            <span className={"text-gray-700"}>mit einem <span
-                                                onClick={createHeart}> ❤️ </span> Hilfe. Es wurden bereits</span>
-                                    </h1>
-                                    <h1 className={"mt-1 xl:text-9xl md:text-9xl text-6xl font-bold"}>
-                                        <span>{currentHeartAmount = doc.data()['heart'].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}</span> Herzen gesendet.
-                                    </h1>
-                                    <span className={"hidden"}>
-                                        {currentHeartAmount = doc.data()['heart']}
-                                    </span>
-                                </div>
-                            )}
-                        </div>
-                    ))}
-                </motion.div>
+                <Heart/>
             </div>
             <div className={"flex justify-center text-center mt-12 mb-5"}>
                 <p className={"text-gray-800 text-sm"}>
                     Um ein Herz zu senden, musst du auf das Herz (Emoji) klicken.
                     <br/>
-                    <a className={"transition text-gray-700 hover:text-gray-500"} title={"Impressum/Rechtliches"} target={"_blank"} rel="noreferrer" href={"https://marvhuelsmann.com"}>Marvin
+                    <a className={"transition text-gray-700 hover:text-gray-500"} title={"Impressum/Rechtliches"}
+                       target={"_blank"} rel="noreferrer" href={"https://marvhuelsmann.com"}>Marvin
                         Hülsmann</a> - {new Date().getFullYear()} ©, Ukraine digital helfen
                 </p>
             </div>
