@@ -101,7 +101,7 @@ export default function Home() {
             </div>
             <div className={"flex justify-center text-center mt-12 mb-5"}>
                 <p className={"text-gray-800 text-sm"}>
-                    Um ein Herz zu senden, musst du auf das "Herz klicken".
+                    Um ein Herz zu senden, musst du auf das Herz klicken.
                     <br/>
                     <a target={"_blank"} rel="noreferrer" href={"https://marvhuelsmann.com"}>Marvin Hülsmann</a> - {new Date().getFullYear()} ©, Ukraine digital helfen
                 </p>
