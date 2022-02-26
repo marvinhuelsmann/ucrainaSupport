@@ -104,7 +104,7 @@ export default function Home() {
                 <p className={"text-gray-800 text-sm"}>
                     Um ein Herz zu senden, musst du auf das Herz (Emoji) klicken.
                     <br/>
-                    <a target={"_blank"} rel="noreferrer" href={"https://marvhuelsmann.com"}>Marvin
+                    <a className={"transition text-gray-700 hover:text-gray-500"} title={"Impressum/Rechtliches"} target={"_blank"} rel="noreferrer" href={"https://marvhuelsmann.com"}>Marvin
                         Hülsmann</a> - {new Date().getFullYear()} ©, Ukraine digital helfen
                 </p>
             </div>
