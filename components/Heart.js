@@ -124,7 +124,7 @@ export default function Heart() {
                                         className={"text-blue-500 hover:text-blue-400 transition cursor-pointer"}
                                         rel="noreferrer"
                                         target={"_blank"}
-                                        href={"http://www.twitter.com/share?url=Schau dir doch mal https://ukraine.live an und untersütze die Ukraine! ❤️&hashtags=Ukraine,Regierung @marvhuelsmann"}>Freunde weiterteilen</a>...
+                                        href={"http://www.twitter.com/share?url=Schau dir doch mal https://ukraine.live an und unterstütze die Ukraine! ❤️&hashtags=Ukraine,Regierung @marvhuelsmann"}>Freunde weiterteilen</a>...
                                           </p>
                                 </div>
 
