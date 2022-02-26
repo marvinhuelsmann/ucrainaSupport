@@ -3,6 +3,7 @@ import {motion} from "framer-motion"
 import db from "../lib/clientApp";
 import {useCollection} from "react-firebase-hooks/firestore";
 
+
 export default function Home() {
     const [heart] = useCollection(
         db.collection('ucraine'),
@@ -39,7 +40,7 @@ export default function Home() {
                     <div className={"xl:mt-12 md:mt-20 mt-24 xl:ml-12 md:ml-12 ml-6 cursor-pointer"}>
                         <motion.div
                             drag="x"
-                            dragConstraints={{left: 0, right: 1}}
+                            dragConstraints={{left: 0, right: 0}}
                             whileHover={{scale: 1.05}}
                             whileTap={{scale: 0.9}}
                         >
@@ -66,7 +67,7 @@ export default function Home() {
             </div>
             <div className={"justify-center text-center mt-24"}>
                 <h1 className={"text-5xl font-bold"}>
-                    Schenk der Ukraine
+                    Schenke der Ukraine
                 </h1>
                 <motion.div
                     animate={{
@@ -84,11 +85,11 @@ export default function Home() {
                                 <div className={"xl:pt-0 pt-4"}>
                                     <h1
                                         className={"xl:text-8xl md:text-8xl text-5xl transition cursor-pointer font-bold"}>
-                                        <span className={"text-gray-700"}>mit einem <span
-                                            onClick={createHeart}> ❤️ </span> Hilfe. Es wurden bereits</span>
+                                            <span className={"text-gray-700"}>mit einem <span
+                                                onClick={createHeart}> ❤️ </span> Hilfe. Es wurden bereits</span>
                                     </h1>
                                     <h1 className={"mt-1 xl:text-9xl md:text-9xl text-6xl font-bold"}>
-                                        <span>{currentHeartAmount = doc.data()['heart'].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}</span> gesendet.
+                                        <span>{currentHeartAmount = doc.data()['heart'].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}</span> Herzen gesendet.
                                     </h1>
                                     <span className={"hidden"}>
                                         {currentHeartAmount = doc.data()['heart']}
@@ -101,9 +102,10 @@ export default function Home() {
             </div>
             <div className={"flex justify-center text-center mt-12 mb-5"}>
                 <p className={"text-gray-800 text-sm"}>
-                    Um ein Herz zu senden, musst du auf das Herz klicken.
+                    Um ein Herz zu senden, musst du auf das Herz (Emoji) klicken.
                     <br/>
-                    <a target={"_blank"} rel="noreferrer" href={"https://marvhuelsmann.com"}>Marvin Hülsmann</a> - {new Date().getFullYear()} ©, Ukraine digital helfen
+                    <a target={"_blank"} rel="noreferrer" href={"https://marvhuelsmann.com"}>Marvin
+                        Hülsmann</a> - {new Date().getFullYear()} ©, Ukraine digital helfen
                 </p>
             </div>
         </div>
