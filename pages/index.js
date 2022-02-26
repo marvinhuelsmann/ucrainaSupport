@@ -64,6 +64,22 @@ export default function Home() {
                         href={"https://www.tagesschau.de/thema/ukraine/"}>Tagesschau Seite</a>!
                     </p>
                 </div>
+                <div className={"mt-6"}>
+                    <h1 className={"text-4xl font-bold"}>
+                        Du möchtest die Ukraine und diese Seite untersützen?
+                    </h1>
+                    <p className={"text-3xl pr-1"}>
+                        Wenn du diese Website unterstützen willst, kannst du sie z.B auf <a
+                        className={"text-blue-500 hover:text-blue-400 transition cursor-pointer"}
+                        rel="noreferrer"
+                        target={"_blank"}
+                        href={"http://www.twitter.com/share?url=Schau dir doch mal https://ukraine.live an und untersütze die Ukraine! ❤️&hashtags=Ukraine,Regierung @marvhuelsmann"}>Twitter tweeten</a>, <br/>um an die Ukraine zu spenden, benutze die <a
+                        className={"text-blue-500 hover:text-blue-400 transition cursor-pointer"}
+                        rel="noreferrer"
+                        href={"https://twitter.com/Ukraine/status/1497594592438497282?s=20"}
+                        target={"_blank"}>offiziellen Adressen</a>.
+                    </p>
+                </div>
             </div>
             <div className={"justify-center text-center mt-24"}>
                 <h1 className={"text-5xl font-bold"}>
