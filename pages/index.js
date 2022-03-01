@@ -3,8 +3,6 @@ import {motion} from "framer-motion"
 import Heart from "../components/Heart";
 
 export default function Home() {
-
-
     return (
         <div>
             <Head>
