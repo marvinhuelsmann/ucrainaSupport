@@ -3,7 +3,11 @@ import {motion} from "framer-motion"
 import Heart from "../components/Heart";
 
 export default function Home() {
-
+    function warDays() {
+        const today = new Date();
+        const birthDate = new Date("February 24, 2022");
+        return Math.floor(Math.abs(today.getTime() - birthDate.getTime())/(1000*3600*24));
+    }
 
     return (
         <div>
@@ -68,6 +72,10 @@ export default function Home() {
             </div>
             <div className={"flex justify-center text-center mt-12 mb-5"}>
                 <p className={"text-gray-800 text-sm"}>
+                    <span className={"font-bold"}>
+                        Laufender Krieg seit {warDays()} Tagen.
+                    </span>
+                    <br/>
                     Um ein Herz zu senden, musst du auf das Herz (Emoji) klicken.
                     <br/>
                     <a className={"transition text-gray-700 hover:text-gray-500"} title={"Impressum/Rechtliches"}
