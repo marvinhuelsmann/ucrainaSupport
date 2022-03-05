@@ -8,7 +8,6 @@ export default function Home() {
         const birthDate = new Date("February 24, 2022");
         return Math.floor(Math.abs(today.getTime() - birthDate.getTime())/(1000*3600*24));
     }
-
     return (
         <div>
             <Head>
