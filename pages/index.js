@@ -6,7 +6,7 @@ export default function Home() {
     function warDays() {
         const today = new Date();
         const birthDate = new Date("February 24, 2022");
-        return Math.floor(Math.abs(today.getTime() - birthDate.getTime())/(1000*3600*24));
+        return Math.floor(Math.abs(today.getTime() - birthDate.getTime())/(1000*3600*24) + 1);
     }
     return (
         <div>
