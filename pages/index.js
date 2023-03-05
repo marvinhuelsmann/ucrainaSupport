@@ -54,7 +54,7 @@ export default function Home() {
                         className={"text-blue-500 hover:text-blue-400 transition cursor-pointer"}
                         rel="noreferrer"
                         target={"_blank"}
-                        href={"http://www.twitter.com/share?url=Schau dir doch mal https://ukraines.live an und unterstütze die Ukraine! ❤️&hashtags=Ukraine,Regierung @marvhuelsmann"}>Twitter
+                        href={"http://www.twitter.com/share?url=Schau dir doch mal https://ucraina-support.vercel.app an und unterstütze die Ukraine! ❤️&hashtags=Ukraine,Regierung @marvhuelsmann"}>Twitter
                         tweeten</a>, <br/>um an die Ukraine zu spenden, benutze die <a
                         className={"text-blue-500 hover:text-blue-400 transition cursor-pointer"}
                         rel="noreferrer"
